@@ -14,8 +14,9 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Admin Login'),
-      ),
+        title: Text('Admin Login')),
+        backgroundColor: Color(0xFF578EF5),
+      
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
@@ -34,7 +35,15 @@ class _LoginState extends State<Login> {
               border: OutlineInputBorder(),
               ),
             ),
-
+          ElevatedButton(
+            onPressed: () {
+              // Handle login logic here
+              String username = inputNama.text;
+              String password = inputPassword.text;
+              print('Username: $username, Password: $password');
+            },
+            child: Text('Masuk'),
+          ),
           ],
         ),
       ),
