@@ -20,13 +20,16 @@ class _MyHomePageState extends State<MyHomePage> {
             Center(
               child: Container(
                 width: 300,
-                //height: 300,
                 color: Colors.white,
                 child: TextField(
                   // Menambahkan dekorasi pada TextField
                   decoration: InputDecoration(
+                    fillColor: Color (0xFFF2F7A0),
                     hintText: 'Masukkan Username',
-                    border: OutlineInputBorder(),
+                    filled: true,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(40)),
+                ),
               ),
               // Menghubungkan TextField dengan controller
               controller: inputNama,
