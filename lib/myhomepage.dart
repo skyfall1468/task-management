@@ -8,56 +8,58 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  TextEditingController inputNama = TextEditingController();
+  final TextEditingController inputNama = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    // Menggunakan Scaffold untuk membuat struktur dasar halaman
-    return Scaffold(appBar: AppBar(
-      // Menambahkan AppBar dengan judul "Task Management" dan warna latar belakang biru
-        title: Text('Task Management')),
-        backgroundColor: Color (0xFF578EF5),
-        // Menambahkan body dengan Column untuk menampilkan konten secara vertikal
-        body:Column(
-          children: [
-            Center(
-              child: Container(
-                width: 300,
-                color: Colors.white,
-                child: TextField(
-                  // Menambahkan dekorasi pada TextField
-                  decoration: InputDecoration(
-                    fillColor: Color (0xFFF2F7A0),
-                    hintText: 'Masukkan Username',
-                    filled: true,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(40)),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Task Management'),
+        backgroundColor: const Color(0xFF578EF5),
+      ),
+      backgroundColor: const Color(0xFF578EF5),
+      body: Column(
+        children: [
+          Center(
+            child: Container(
+              width: 300,
+              color: Colors.white,
+              child: TextField(
+                decoration: InputDecoration(
+                  fillColor: const Color(0xFFF2F7A0),
+                  hintText: 'Masukkan Username',
+                  filled: true,
+                  border: const OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(40)),
+                  ),
                 ),
+                controller: inputNama,
+                onSubmitted: (value) {
+                  inputNama.text = value;
+                },
               ),
-              // Menghubungkan TextField dengan controller
-              controller: inputNama,
-              // Menangani event ketika pengguna menekan tombol "Enter" pada keyboard
-              onSubmitted: (value) {
-                // Menyimpan nilai yang dimasukkan ke dalam controller
-                inputNama.text = value;
-              },
             ),
           ),
-        ),
-
-            // Menambahkan jarak antara TextField dan tombol
-            Padding(
-              padding: EdgeInsets.all(16.0),
-            ),
-            
-              // Menambahkan tombol untuk menampilkan nilai dari TextField
-              ElevatedButton(
-                child: Text('Tampilkan Username'),
-                onPressed: () {
-                print(inputNama.text);
-              },
-            )
-          ],
-        )
+          const Padding(padding: EdgeInsets.all(16.0)),
+          ElevatedButton(
+            child: const Text('Tampilkan Username'),
+            onPressed: () {
+              print(inputNama.text);
+            },
+          ),
+          const SizedBox(height: 16),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/login',
+                (route) => false,
+              );
+            },
+            child: const Text('Log Out'),
+          ),
+        ],
+      ),
     );
   }
 }
