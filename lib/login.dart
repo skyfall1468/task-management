@@ -8,12 +8,15 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  // Membuat controller untuk menangani input dari TextField
   TextEditingController inputNama = TextEditingController();
   TextEditingController inputPassword = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+    // Menggunakan Scaffold untuk membuat struktur dasar halaman
     return Scaffold(
+      // Menambahkan AppBar dengan judul kosong dan warna latar belakang biru
       appBar: AppBar(
         centerTitle: true,
         title: const Text(''),
@@ -24,8 +27,10 @@ class _LoginState extends State<Login> {
         padding: const EdgeInsets.all(16.0),
         child: Center(
           child: Column(
+            // Menambahkan properti mainAxisAlignment untuk memusatkan konten secara vertikal
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // Menambahkan gambar di atas teks "Task Management"
               Center(
                 child: Image(
                   image: AssetImage('assets/home.png'),
@@ -33,6 +38,7 @@ class _LoginState extends State<Login> {
                   height: 200,
                 ),
               ),
+              // Menambahkan teks "Task Management" di bawah gambar
               const Text(
                 'Task Management',
                 textAlign: TextAlign.center,
@@ -43,6 +49,7 @@ class _LoginState extends State<Login> {
                   color: Colors.black,
                 ),
               ),
+              // Menambahkan teks "Admin Login" di bawah teks "Task Management"
               const Text(
                 'Admin Login',
                 textAlign: TextAlign.center,
@@ -53,6 +60,7 @@ class _LoginState extends State<Login> {
                   color: Colors.black,
                 ),
               ),
+              // Menambahkan jarak antara teks dan TextField
               const SizedBox(height: 20),
               SizedBox(
                 width: 300,
@@ -68,6 +76,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
               ),
+              // Menambahkan jarak antara TextField dan tombol
               const SizedBox(height: 16),
               SizedBox(
                 width: 300,
@@ -87,9 +96,11 @@ class _LoginState extends State<Login> {
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
+                  // Mengambil nilai dari TextField dan menghapus spasi di awal dan akhir
                   final username = inputNama.text.trim();
                   final password = inputPassword.text.trim();
 
+                  // Validasi input: pastikan username dan password tidak kosong
                   if (username.isEmpty || password.isEmpty) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
@@ -99,9 +110,12 @@ class _LoginState extends State<Login> {
                     return;
                   }
 
+                  // Lakukan proses login di sini (misalnya, memeriksa username dan password)
                   print('Username: $username, Password: $password');
+                  // Jika login berhasil, navigasikan ke halaman berikutnya
                   Navigator.pushReplacementNamed(context, '/home');
                 },
+                // Menambahkan teks "Masuk" pada tombol
                 child: const Text('Masuk'),
               ),
             ],

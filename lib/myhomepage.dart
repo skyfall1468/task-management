@@ -11,10 +11,12 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController inputNama = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    // Menggunakan Scaffold untuk membuat struktur dasar halaman
     return Scaffold(appBar: AppBar(
+      // Menambahkan AppBar dengan judul "Task Management" dan warna latar belakang biru
         title: Text('Task Management')),
         backgroundColor: Color (0xFF578EF5),
-      
+        // Menambahkan body dengan Column untuk menampilkan konten secara vertikal
         body:Column(
           children: [
             Center(
@@ -42,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
 
+            // Menambahkan jarak antara TextField dan tombol
             Padding(
               padding: EdgeInsets.all(16.0),
             ),
