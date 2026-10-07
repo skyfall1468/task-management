@@ -87,9 +87,19 @@ class _LoginState extends State<Login> {
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  print(
-                    'Username: ${inputNama.text}, Password: ${inputPassword.text}',
-                  );
+                  final username = inputNama.text.trim();
+                  final password = inputPassword.text.trim();
+
+                  if (username.isEmpty || password.isEmpty) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Username dan password harus diisi!'),
+                      ),
+                    );
+                    return;
+                  }
+
+                  print('Username: $username, Password: $password');
                   Navigator.pushReplacementNamed(context, '/home');
                 },
                 child: const Text('Masuk'),
