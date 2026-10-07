@@ -14,25 +14,36 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Admin Login')),
+        title: Text('Admin Login'),
         backgroundColor: Color(0xFF578EF5),
-      
+      ),
+      backgroundColor: Color(0xFF578EF5),
+
       body: Padding(
         padding: EdgeInsets.all(16.0),
+        child: Center(
         child: Column(
           children: [
-            TextField(
-              controller: inputNama,
-              decoration: InputDecoration(
-                labelText: 'Username',
-                border: OutlineInputBorder(),
+            Container(
+              width: 300,
+              color: Colors.white,
+              child: TextField(
+                controller: inputNama,
+                decoration: InputDecoration(
+                  labelText: 'Username',
+                  border: OutlineInputBorder(),
               ),
             ),
-            TextField(
-              controller: inputPassword,
-              decoration: InputDecoration(
-              labelText: 'Password',
-              border: OutlineInputBorder(),
+          ),
+            Container(
+              width: 300,
+              color: Colors.white,
+              child: TextField(
+                controller: inputPassword,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  border: OutlineInputBorder(),
+                ),
               ),
             ),
           ElevatedButton(
@@ -46,7 +57,8 @@ class _LoginState extends State<Login> {
           ),
           ],
         ),
+        ),
       ),
-    );
+      );
   }
 }
