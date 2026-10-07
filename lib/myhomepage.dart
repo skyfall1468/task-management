@@ -17,14 +17,14 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color (0xFF578EF5),
         body:Column(
           children: [
-            Container(
-              width: 500,
-              height: 500,
-              child: Center(
+            Center(
+              child: Container(
+                width: 300,
+                color: Colors.white,
                 child: TextField(
-                decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Masukkan Nama',
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Masukkan Username',
               ),
               controller: inputNama,
               onSubmitted: (value) {
@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
             ElevatedButton(
-              child: Text('Tampilkan Nama'),
+              child: Text('Tampilkan Username'),
               onPressed: () {
                 print('${inputNama.text}');
               },
