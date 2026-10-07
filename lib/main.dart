@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       //home: Login(),
+      
+      // Menambahkan rute untuk halaman login dan halaman utama
       routes: {
         "/": (context) => const Login(),
         "/home": (context) => const MyHomePage(),
