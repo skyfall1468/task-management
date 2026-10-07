@@ -34,7 +34,7 @@ class _LoginState extends State<Login> {
                 )
               ),
               const Text(
-                'Welcome to Task Manager',
+                'Task Management',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'serif',
