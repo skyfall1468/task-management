@@ -30,6 +30,7 @@ class _LoginState extends State<Login> {
                 'Welcome to Task Manager',
                 textAlign: TextAlign.center,
                 style: TextStyle(
+                  fontFamily: 'serif',
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -39,6 +40,7 @@ class _LoginState extends State<Login> {
                 'Admin Login',
                 textAlign: TextAlign.center,
                 style: TextStyle(
+                  fontFamily: 'serif',
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
