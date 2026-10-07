@@ -11,10 +11,10 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController inputNama = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Task Management')),
+    return Scaffold(appBar: AppBar(
+        title: Text('Task Management'),
         backgroundColor: Color (0xFF578EF5),
+        ),
         body:Column(
           children: [
             Center(
