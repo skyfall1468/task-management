@@ -12,9 +12,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(appBar: AppBar(
-        title: Text('Task Management'),
+        title: Text('Task Management')),
         backgroundColor: Color (0xFF578EF5),
-        ),
+      
         body:Column(
           children: [
             Center(
