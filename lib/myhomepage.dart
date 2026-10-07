@@ -20,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Center(
               child: Container(
                 width: 300,
-                height: 300,
+                //height: 300,
                 color: Colors.white,
                 child: TextField(
                   // Menambahkan dekorasi pada TextField
