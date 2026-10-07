@@ -27,12 +27,21 @@ class _LoginState extends State<Login> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
+                'Welcome to Task Manager',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              const Text(
                 'Admin Login',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               const SizedBox(height: 20),
@@ -69,7 +78,9 @@ class _LoginState extends State<Login> {
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  print('Username: ${inputNama.text}, Password: ${inputPassword.text}');
+                  print(
+                    'Username: ${inputNama.text}, Password: ${inputPassword.text}',
+                  );
                 },
                 child: const Text('Masuk'),
               ),
