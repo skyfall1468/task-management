@@ -69,9 +69,7 @@ class _LoginState extends State<Login> {
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  final username = inputNama.text;
-                  final password = inputPassword.text;
-                  print('Username: $username, Password: $password');
+                  print('Username: ${inputNama.text}, Password: ${inputPassword.text}');
                 },
                 child: const Text('Masuk'),
               ),
