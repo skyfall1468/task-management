@@ -24,9 +24,9 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ElevatedButton(
-              child: Text('Submit'),
+              child: Text('Tampilkan Nama'),
               onPressed: () {
-                print('Input Nama: ${inputNama.text}');
+                print('${inputNama.text}');
               },
             )
           ],
