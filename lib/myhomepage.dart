@@ -18,11 +18,11 @@ class _MyHomePageState extends State<MyHomePage> {
         body:Column(
           children: [
             Container(
-              margin: EdgeInsets.all(20),
-              child: Text('Masukkan Nama Anda'),
-            ),
-            TextField(
-              decoration: InputDecoration(
+              width: 500,
+              height: 500,
+              child: Center(
+                child: TextField(
+                decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Masukkan Nama',
               ),
@@ -31,6 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 inputNama.text = value;
               },
             ),
+          ),
+        ),
             ElevatedButton(
               child: Text('Tampilkan Nama'),
               onPressed: () {
