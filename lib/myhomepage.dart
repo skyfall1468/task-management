@@ -17,6 +17,10 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color (0xFF578EF5),
         body:Column(
           children: [
+            Container(
+              margin: EdgeInsets.all(20),
+              child: Text('Masukkan Nama Anda'),
+            ),
             TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
