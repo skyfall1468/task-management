@@ -20,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
             TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: 'Masukkan Nama',
+                hintText: 'Masukkan Nama',
               ),
               controller: inputNama,
               onSubmitted: (value) {
