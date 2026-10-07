@@ -18,6 +18,10 @@ class _MyHomePageState extends State<MyHomePage> {
         body:Column(
           children: [
             TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Masukkan Nama',
+              ),
               controller: inputNama,
               onSubmitted: (value) {
                 inputNama.text = value;
