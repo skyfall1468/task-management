@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
                   final password = inputPassword.text;
                   print('Username: $username, Password: $password');
                 },
-                child: const Text('Login'),
+                child: const Text('Masuk'),
               ),
             ],
           ),
