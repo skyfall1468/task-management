@@ -13,7 +13,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Task Management'),
-        backgroundColor: const Color.fromARGB(255, 87, 142, 245),
+        backgroundColor: Color (0xFF578EF5),
       ),
       
     );
