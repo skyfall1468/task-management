@@ -25,8 +25,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: TextField(
                   // Menambahkan dekorasi pada TextField
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
                     hintText: 'Masukkan Username',
+                    border: OutlineInputBorder(),
               ),
               // Menghubungkan TextField dengan controller
               controller: inputNama,
