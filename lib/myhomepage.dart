@@ -14,7 +14,6 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Task Management App'),
       ),
-      body: Placeholder(),
     );
   }
 }
