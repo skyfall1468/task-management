@@ -31,7 +31,7 @@ class _LoginState extends State<Login> {
                   image: AssetImage('assets/home.png'),
                   width: 200,
                   height: 200,
-                )
+                ),
               ),
               const Text(
                 'Task Management',
@@ -90,6 +90,7 @@ class _LoginState extends State<Login> {
                   print(
                     'Username: ${inputNama.text}, Password: ${inputPassword.text}',
                   );
+                  Navigator.pushReplacementNamed(context, '/home');
                 },
                 child: const Text('Masuk'),
               ),
