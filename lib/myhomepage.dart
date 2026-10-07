@@ -41,10 +41,15 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
-            // Menambahkan tombol untuk menampilkan nilai dari TextField
-            ElevatedButton(
-              child: Text('Tampilkan Username'),
-              onPressed: () {
+
+            Padding(
+              padding: EdgeInsets.all(16.0),
+            ),
+            
+              // Menambahkan tombol untuk menampilkan nilai dari TextField
+              ElevatedButton(
+                child: Text('Tampilkan Username'),
+                onPressed: () {
                 print(inputNama.text);
               },
             )
