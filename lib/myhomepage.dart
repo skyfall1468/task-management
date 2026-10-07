@@ -23,12 +23,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 300,
                 color: Colors.white,
                 child: TextField(
+                  // Menambahkan dekorasi pada TextField
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Masukkan Username',
               ),
+              // Menghubungkan TextField dengan controller
               controller: inputNama,
+              // Menangani event ketika pengguna menekan tombol "Enter" pada keyboard
               onSubmitted: (value) {
+                // Menyimpan nilai yang dimasukkan ke dalam controller
                 inputNama.text = value;
               },
             ),
