@@ -9,6 +9,6 @@ void main() {
     expect(find.text('Admin Login'), findsOneWidget);
     expect(find.text('Username'), findsOneWidget);
     expect(find.text('Password'), findsOneWidget);
-    expect(find.text('Login'), findsOneWidget);
+    expect(find.text('Masuk'), findsOneWidget);
   });
 }

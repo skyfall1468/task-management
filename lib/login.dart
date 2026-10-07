@@ -15,7 +15,8 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Admin Login'),
+        centerTitle: true,
+        title: const Text(''),
         backgroundColor: const Color(0xFF578EF5),
       ),
       backgroundColor: const Color(0xFF578EF5),
@@ -25,6 +26,16 @@ class _LoginState extends State<Login> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const Text(
+                'Admin Login',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 20),
               SizedBox(
                 width: 300,
                 child: TextField(
