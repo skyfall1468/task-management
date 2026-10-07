@@ -26,6 +26,13 @@ class _LoginState extends State<Login> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Center(
+                child: Image(
+                  image: AssetImage('assets/home.png'),
+                  width: 200,
+                  height: 200,
+                )
+              ),
               const Text(
                 'Welcome to Task Manager',
                 textAlign: TextAlign.center,
